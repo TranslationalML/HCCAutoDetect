@@ -1,0 +1,6 @@
+dataset:
+  name_or_id: 30
+  datadir: "HCC_Surveillance/derivatives/10_T1_dataset"
+  dataroot: 'data/HCC_Surveillance_patients'
+trainer:
+  class_name: 'nnUNetTrainer_250epochs'

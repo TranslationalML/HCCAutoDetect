@@ -1,0 +1,6 @@
+dataset:
+  name_or_id: 1
+  datadir: "HCC_Surveillance/derivatives/6_T1_dataset_liver"
+  dataroot: 'data/Liver'
+trainer:
+  class_name: 'nnUNetTrainer_1000epochs'

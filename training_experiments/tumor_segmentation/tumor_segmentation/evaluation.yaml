@@ -1,0 +1,18 @@
+post_trans_threshold: 0.5
+tta_num_examples: 5
+tta_threshold: 0.01
+
+overlap: [0.5, 0.5, 0.5]
+sliding_window_inf_mode: "gaussian"
+sliding_window_sigma_scale: [0.25, 0.25, 0.25]
+
+predict_test: False
+mean_prob_map_threshold: 0.5
+FROC: False
+predict_train: False
+
+art_contrast_threshold: 1
+vein_mask_criterion: False
+vein_mask_threshold: 0  
+vein_mask_path: "total_segmentator"
+

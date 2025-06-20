@@ -1,0 +1,63 @@
+alpha: 0.9
+background_patches: 1
+beta: 0.1
+check_point_rate: 100
+saving_name: LLDMMRI_fine_on_HCC_Surveillance_Tver_al_0.9_beta_0.1
+dataset: HCC_Surveillance/derivatives/10_T1_dataset
+wandb_project_name: HCC Surveillance Liver Tumor Segmentation
+early_stopping: 100
+foreground_patches: 1
+learning_rate: 1e-4
+load_previous_model_params: false
+log_freq_gradients: 100
+loss_reduction: none
+lr_scheduler: cosine
+max_epochs: 3000
+contrast_gamma:
+- 1.0
+- 1.5
+model_params:
+  channels:
+  - 32
+  - 64
+  - 128
+  - 256
+  - 320
+  - 320
+  in_channels: 4
+  out_channels: 1
+  spatial_dims: 3
+  strides:
+  - 2
+  - 2
+  - 2
+  - 2
+  - 1
+model_path_list:
+- wandb/model_fold_0/files/last_checkpoint.pth.gz
+- wandb/model_fold_0/files/last_checkpoint.pth.gz
+- wandb/model_fold_0/files/last_checkpoint.pth.gz
+- wandb/model_fold_0/files/last_checkpoint.pth.gz
+- wandb/model_fold_0/files/last_checkpoint.pth.gz
+model_type: unet
+num_workers: 0
+overlap: 0.5
+patch_samples: 10
+patch_size:
+- 128
+- 128
+- 16
+pixel_resampling_size:
+- 0.593785
+- 0.593785
+- 3.0
+post_trans_threshold: 0.5
+save_plot: false
+sliding_window_inf_mode: gaussian
+sliding_window_sigma_scale:
+- 0.25
+- 0.25
+- 0.25
+train_batch_size: 2
+val_batch_size: 1
+val_interval: 50
